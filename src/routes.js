@@ -37,9 +37,12 @@ const Typography = React.lazy(() => import('./views/theme/typography/Typography'
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'));
 const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
+const Tets = React.lazy(() => import('./views/pages/testpage/TestFile'));
+const Divider = React.lazy(() => import('./components/divider/Divider'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
+  { path: '/test', name: 'Dashboard', component: Tets },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
   { path: '/theme', name: 'Theme', component: Colors, exact: true },
   { path: '/theme/colors', name: 'Colors', component: Colors },
@@ -78,7 +81,8 @@ const routes = [
   { path: '/notifications/toaster', name: 'Toaster', component: Toaster },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/users', exact: true,  name: 'Users', component: Users },
-  { path: '/users/:id', exact: true, name: 'User Details', component: User }
+  { path: '/users/:id', exact: true, name: 'User Details', component: User },
+  { path: '/divider', exact: true, name: 'User Details', component: Divider }
 ];
 
 export default routes;

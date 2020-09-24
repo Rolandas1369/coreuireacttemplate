@@ -13,6 +13,9 @@ import {
   CCallout
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import DataService from '../../services/DataService';
+
+
 
 import MainChartExample from '../charts/MainChartExample.js'
 
@@ -20,6 +23,13 @@ const WidgetsDropdown = lazy(() => import('../widgets/WidgetsDropdown.js'))
 const WidgetsBrand = lazy(() => import('../widgets/WidgetsBrand.js'))
 
 const Dashboard = () => {
+
+  let ds = new DataService()
+
+  const p = ds.get_data()
+
+  console.log('tets', p)
+
   return (
     <>
       <WidgetsDropdown />

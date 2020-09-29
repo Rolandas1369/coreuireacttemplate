@@ -35,7 +35,7 @@ const TheContent = () => {
                   )} />
               )
             })}
-            <Redirect from="/" to="/dashboard" />
+            <Redirect from="/app" to="/app/dashboard" />
           </Switch>
         </Suspense>
       </CContainer>
